@@ -46,7 +46,7 @@ async function loadPng(path) {
 
 Or like this, in Javascript:
 
-```
+```javascript
 const fs = require('fs-extra');
 const UPNG = require('upng-js');
 const reader = require('@gammastream/qrcode-poly-reader');
