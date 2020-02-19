@@ -16,7 +16,7 @@ To install, execute the following command from the root of your project:
 npm install @gammastream/qrcode-poly-reader --save
 ```
 
-Then, use it like this:
+Then, use it like this in Typescript:
 
 ```ts
 import * as fs from "fs-extra";
@@ -43,6 +43,29 @@ async function loadPng(path) {
     return out;
   }
 ```
+
+Or like this, in Javascript:
+
+```
+const fs = require('fs-extra');
+const UPNG = require('upng-js');
+const reader = require('@gammastream/qrcode-poly-reader');
+
+
+loadPng('./test-0.png').then((img) => {
+    const results = reader.polyReader(img.data, img.width, img.height);
+    console.log( results );
+});
+
+async function loadPng(path) {
+    const data = UPNG.decode(await fs.readFile(path));
+    return {
+        data: new Uint8ClampedArray(UPNG.toRGBA8(data)[0]),
+        width: data.width,
+        height: data.height,
+      };
+  }
+  ```
 
 ----
 
