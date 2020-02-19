@@ -65,7 +65,7 @@ async function loadPng(path) {
         height: data.height,
       };
   }
-  ```
+```
 
 ----
 
