@@ -1,14 +1,16 @@
 {
-  "name": "@gammastream/qrcode-polyreader",
+  "name": "@gammastream/qrcode-poly-reader",
   "version": "1.0.0",
   "description": "Finds multiple QR Codes in an image utilizing jsQR under the hood.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gammastream/qrcode-polyreader.git"
+    "url": "git+https://github.com/gammastream/qrcode-poly-reader.git"
   },
   "keywords": [
     "qrcode",
@@ -18,9 +20,9 @@
   "author": "Michael Sacket <msacket@gammastream.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gammastream/qrcode-polyreader/issues"
+    "url": "https://github.com/gammastream/qrcode-poly-reader/issues"
   },
-  "homepage": "https://github.com/gammastream/qrcode-polyreader#readme",
+  "homepage": "https://github.com/gammastream/qrcode-poly-reader#readme",
   "dependencies": {
     "jsqr": "^1.2.0"
   },
@@ -33,5 +35,9 @@
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.5",
     "upng-js": "^2.1.0"
-  }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "prepublish": "tsc"
 }
