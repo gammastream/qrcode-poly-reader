@@ -23,8 +23,8 @@ export interface PolyReaderConfig {
 
 export function makeRegions(width: number, height: number): SearchRegion[] {
     const size: Dimension = {
-        width: width / 2,
-        height: height / 2
+        width: Math.floor(width / 2),
+        height: Math.floor(height / 2)
     };
 
     // top left quadrant

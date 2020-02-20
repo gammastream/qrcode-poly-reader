@@ -1,6 +1,6 @@
 {
   "name": "@gammastream/qrcode-poly-reader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Finds multiple QR Codes in an image utilizing jsQR under the hood.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
